@@ -1,0 +1,11 @@
+@function dm-rem($pixels) {
+  @return #{($pixels / 16)}rem;
+}
+
+@function dm-color($color-name) {
+  @return if(global-variable-exists($color-name), variable-get($color-name), null);
+}
+
+@function dm-contrast($color, $background) {
+  @return if(lightness($color) > lightness($background), 0, 1);
+}

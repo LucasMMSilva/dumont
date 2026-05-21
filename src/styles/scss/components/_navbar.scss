@@ -1,0 +1,36 @@
+@import '../abstracts/variables';
+
+.dm-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $dm-spacing-4;
+  padding: $dm-spacing-4 $dm-spacing-5;
+  background-color: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: $dm-radius-lg;
+  box-shadow: $dm-shadow-sm;
+}
+
+.dm-navbar__brand {
+  font-weight: $dm-font-weight-bold;
+  color: $dm-color-neutral-900;
+  text-decoration: none;
+}
+
+.dm-navbar__links {
+  display: flex;
+  gap: $dm-spacing-4;
+  flex-wrap: wrap;
+}
+
+.dm-navbar__link {
+  color: $dm-color-neutral-700;
+  text-decoration: none;
+  font-size: $dm-font-size-base;
+}
+
+.dm-navbar__link:hover,
+.dm-navbar__link:focus-visible {
+  color: $dm-color-primary;
+}

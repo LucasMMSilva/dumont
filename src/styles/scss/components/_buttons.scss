@@ -1,0 +1,68 @@
+@import '../abstracts/variables';
+
+.dm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: $dm-font-weight-medium;
+  font-size: $dm-font-size-base;
+  border-radius: $dm-radius-sm;
+  padding: $dm-spacing-3 $dm-spacing-4;
+  min-height: 2.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.dm-btn:hover {
+  transform: translateY(-1px);
+}
+
+.dm-btn:focus-visible {
+  outline: 3px solid rgba(44, 123, 229, 0.35);
+  outline-offset: 2px;
+}
+
+.dm-btn--primary {
+  background-color: $dm-color-primary;
+  color: #fff;
+}
+
+.dm-btn--secondary {
+  background-color: $dm-color-secondary;
+  color: #fff;
+}
+
+.dm-btn--success {
+  background-color: $dm-color-success;
+  color: #fff;
+}
+
+.dm-btn--danger {
+  background-color: $dm-color-danger;
+  color: #fff;
+}
+
+.dm-btn--warning {
+  background-color: $dm-color-warning;
+  color: $dm-color-neutral-900;
+}
+
+.dm-btn--info {
+  background-color: $dm-color-info;
+  color: #fff;
+}
+
+.dm-btn--small,
+.dm-btn--large {
+  padding: $dm-spacing-3 $dm-spacing-4;
+  font-size: $dm-font-size-base;
+}
+
+.dm-btn--disabled,
+.dm-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}

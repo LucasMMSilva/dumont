@@ -1,0 +1,12 @@
+@import '../abstracts/variables';
+
+.dm-text-center { text-align: center; }
+.dm-text-right { text-align: right; }
+.dm-text-left { text-align: left; }
+
+.dm-text-muted { color: $dm-color-neutral-500; }
+.dm-text-strong { font-weight: $dm-font-weight-semibold; }
+
+.dm-heading, .dm-text {
+  margin: 0;
+}

@@ -1,0 +1,30 @@
+@import '../abstracts/variables';
+
+.dm-alert {
+  border-radius: $dm-radius-md;
+  padding: $dm-spacing-4;
+  margin-bottom: $dm-spacing-4;
+  border: 1px solid transparent;
+  color: $dm-color-neutral-900;
+  background-color: $dm-color-neutral-100;
+}
+
+.dm-alert--success {
+  background-color: rgba($dm-color-success, 0.12);
+  border-color: $dm-color-success;
+}
+
+.dm-alert--warning {
+  background-color: rgba($dm-color-warning, 0.14);
+  border-color: $dm-color-warning;
+}
+
+.dm-alert--danger {
+  background-color: rgba($dm-color-danger, 0.12);
+  border-color: $dm-color-danger;
+}
+
+.dm-alert--info {
+  background-color: rgba($dm-color-info, 0.12);
+  border-color: $dm-color-info;
+}

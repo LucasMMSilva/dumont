@@ -1,0 +1,36 @@
+@import '../abstracts/variables';
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: $dm-font-weight-semibold;
+  line-height: $dm-line-height-heading;
+}
+
+p {
+  margin: 0 0 $dm-spacing-4 0;
+}
+
+.dm-heading {
+  margin: 0;
+  color: $dm-color-neutral-900;
+  line-height: $dm-line-height-heading;
+}
+
+.dm-heading--xl { font-size: $dm-font-size-3xl; }
+.dm-heading--lg { font-size: $dm-font-size-2xl; }
+.dm-heading--md { font-size: $dm-font-size-xl; }
+
+.dm-text {
+  color: $dm-color-neutral-700;
+  font-size: $dm-font-size-base;
+  line-height: $dm-line-height-base;
+}
+
+.dm-text--lead { font-size: $dm-font-size-lg; }
+.dm-text-body { font-size: $dm-font-size-base; }
+
+.dm-mb-4 { margin-bottom: $dm-spacing-4; }
+.dm-mb-6 { margin-bottom: $dm-spacing-6; }
+.dm-mt-8 { margin-top: $dm-spacing-8; }
+.dm-mb-8 { margin-bottom: $dm-spacing-8; }
+.dm-p-4 { padding: $dm-spacing-4; }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dumont CSS Framework</title>
+    <link rel="stylesheet" href="src/styles/scss/dumont.scss" />
+  </head>
+  <body class="dm-text-body dm-bg-neutral-100">
+    <main class="dm-container dm-mt-8 dm-mb-8">
+      <header class="dm-mb-8">
+        <h1 class="dm-heading dm-heading--xl dm-mb-4">Dumont CSS Framework</h1>
+        <p class="dm-text dm-text--lead dm-mb-6">
+          A minimalist CSS framework with accessible Web Components and SCSS design tokens.
+        </p>
+      </header>
+
+      <section class="dm-grid dm-gap-4 dm-mb-8">
+        <article class="dm-col-12 dm-col-md-6">
+          <dm-card>
+            <h2 class="dm-heading dm-heading--lg dm-mb-3">Button</h2>
+            <p class="dm-text dm-mb-4">The base button component supports variants, sizes and disabled state.</p>
+            <dm-button variant="primary">Primary</dm-button>
+            <dm-button variant="secondary">Secondary</dm-button>
+            <dm-button variant="danger" disabled>Disabled</dm-button>
+          </dm-card>
+        </article>
+
+        <article class="dm-col-12 dm-col-md-6">
+          <dm-card>
+            <h2 class="dm-heading dm-heading--lg dm-mb-3">Alert</h2>
+            <dm-alert variant="warning">This is a warning alert.</dm-alert>
+            <dm-alert variant="success">This is a success alert.</dm-alert>
+          </dm-card>
+        </article>
+      </section>
+
+      <section class="dm-mb-8">
+        <dm-navbar brand="Dumont" />
+      </section>
+
+      <section>
+        <h2 class="dm-heading dm-heading--lg dm-mb-4">Grid layout</h2>
+        <div class="dm-grid dm-gap-4">
+          <div class="dm-col-12 dm-col-sm-6 dm-col-lg-4 dm-card dm-p-4">Column 1</div>
+          <div class="dm-col-12 dm-col-sm-6 dm-col-lg-4 dm-card dm-p-4">Column 2</div>
+          <div class="dm-col-12 dm-col-lg-4 dm-card dm-p-4">Column 3</div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

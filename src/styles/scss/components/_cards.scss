@@ -1,0 +1,15 @@
+@import '../abstracts/variables';
+
+.dm-card {
+  background: #ffffff;
+  border-radius: $dm-radius-lg;
+  box-shadow: $dm-shadow-md;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  padding: $dm-spacing-5;
+}
+
+.dm-card h2,
+.dm-card h3,
+.dm-card h4 {
+  margin-top: 0;
+}

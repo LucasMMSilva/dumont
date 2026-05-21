@@ -1,0 +1,19 @@
+@import '../abstracts/variables';
+
+.dm-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $dm-spacing-1 $dm-spacing-2;
+  border-radius: $dm-radius-sm;
+  font-size: $dm-font-size-xs;
+  font-weight: $dm-font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  background-color: $dm-color-neutral-300;
+  color: $dm-color-neutral-900;
+}
+
+.dm-badge--primary { background-color: $dm-color-primary; color: #fff; }
+.dm-badge--success { background-color: $dm-color-success; color: #fff; }
+.dm-badge--danger { background-color: $dm-color-danger; color: #fff; }

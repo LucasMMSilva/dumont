@@ -1,0 +1,40 @@
+@import 'variables';
+
+$dm-token-map: (
+  'color-primary': $dm-color-primary,
+  'color-secondary': $dm-color-secondary,
+  'color-neutral-900': $dm-color-neutral-900,
+  'color-neutral-700': $dm-color-neutral-700,
+  'color-neutral-500': $dm-color-neutral-500,
+  'color-neutral-300': $dm-color-neutral-300,
+  'color-neutral-100': $dm-color-neutral-100,
+  'color-success': $dm-color-success,
+  'color-warning': $dm-color-warning,
+  'color-danger': $dm-color-danger,
+  'color-info': $dm-color-info,
+  'radius-sm': $dm-radius-sm,
+  'radius-md': $dm-radius-md,
+  'radius-lg': $dm-radius-lg,
+  'shadow-sm': $dm-shadow-sm,
+  'shadow-md': $dm-shadow-md,
+  'shadow-lg': $dm-shadow-lg,
+  'spacing-1': $dm-spacing-1,
+  'spacing-2': $dm-spacing-2,
+  'spacing-3': $dm-spacing-3,
+  'spacing-4': $dm-spacing-4,
+  'spacing-5': $dm-spacing-5,
+  'spacing-6': $dm-spacing-6,
+  'spacing-7': $dm-spacing-7,
+  'spacing-8': $dm-spacing-8,
+  'font-size-base': $dm-font-size-base,
+  'font-size-lg': $dm-font-size-lg,
+  'font-size-xl': $dm-font-size-xl,
+  'line-height-base': $dm-line-height-base,
+  'line-height-heading': $dm-line-height-heading
+);
+
+@mixin generate-css-variables() {
+  @each $name, $value in $dm-token-map {
+    --dm-#{$name}: #{$value};
+  }
+}

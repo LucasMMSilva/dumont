@@ -1,0 +1,41 @@
+@import '../abstracts/variables';
+
+.dm-grid {
+  display: grid;
+  gap: $dm-spacing-4;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+@function dm-col-width($span) {
+  @return #{($span / 12) * 100}%;
+}
+
+@for $i from 1 through 12 {
+  .dm-col-#{$i} {
+    grid-column: span $i / span 12;
+  }
+
+  .dm-offset-#{$i} {
+    margin-left: dm-col-width($i);
+  }
+
+  .dm-order-#{$i} {
+    order: $i;
+  }
+
+  @media (min-width: $dm-breakpoint-sm) {
+    .dm-col-sm-#{$i} { grid-column: span $i / span 12; }
+  }
+
+  @media (min-width: $dm-breakpoint-md) {
+    .dm-col-md-#{$i} { grid-column: span $i / span 12; }
+  }
+
+  @media (min-width: $dm-breakpoint-lg) {
+    .dm-col-lg-#{$i} { grid-column: span $i / span 12; }
+  }
+
+  @media (min-width: $dm-breakpoint-xl) {
+    .dm-col-xl-#{$i} { grid-column: span $i / span 12; }
+  }
+}

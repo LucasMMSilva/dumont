@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+@import 'abstracts/variables';
+@import 'abstracts/tokens';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'layout/grid';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/alerts';
+@import 'components/navbar';
+@import 'components/badge';
+@import 'components/typography';
+@import 'utilities/utilities';
+
+:root {
+  @include generate-css-variables();
+}
+
+html {
+  font-family: $dm-font-family-base;
+  line-height: $dm-line-height-base;
+  font-size: 16px;
+  color: $dm-color-neutral-900;
+  background-color: $dm-color-neutral-100;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.dm-container {
+  width: min(100%, 1120px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $dm-spacing-4;
+  padding-right: $dm-spacing-4;
+}

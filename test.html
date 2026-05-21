@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dumont Test Page</title>
+  <link rel="stylesheet" href="src/styles/scss/dumont.scss" />
+</head>
+<body class="dm-text-body dm-bg-neutral-100">
+  <main class="dm-container dm-mt-8 dm-mb-8">
+    <h1 class="dm-heading dm-heading--xl dm-mb-6">Dumont Test Page</h1>
+
+    <section class="dm-mb-8">
+      <h2 class="dm-heading dm-heading--lg dm-mb-4">Buttons</h2>
+      <dm-button variant="primary">Primary</dm-button>
+      <dm-button variant="secondary">Secondary</dm-button>
+      <dm-button variant="danger" size="large">Danger Large</dm-button>
+      <dm-button variant="success" size="small">Success Small</dm-button>
+      <dm-button disabled>Disabled</dm-button>
+    </section>
+
+    <section class="dm-mb-8">
+      <h2 class="dm-heading dm-heading--lg dm-mb-4">Cards</h2>
+      <dm-card>
+        <h3 class="dm-heading dm-heading--md dm-mb-3">Card Example</h3>
+        <p class="dm-text">This card demonstrates the Dumont card component.</p>
+      </dm-card>
+    </section>
+
+    <section class="dm-mb-8">
+      <h2 class="dm-heading dm-heading--lg dm-mb-4">Alerts</h2>
+      <dm-alert variant="info">Info alert example.</dm-alert>
+      <dm-alert variant="warning">Warning alert example.</dm-alert>
+      <dm-alert variant="danger">Danger alert example.</dm-alert>
+    </section>
+
+    <section class="dm-mb-8">
+      <h2 class="dm-heading dm-heading--lg dm-mb-4">Navbar</h2>
+      <dm-navbar brand="Dumont Test">
+        <a href="#">Home</a>
+        <a href="#">Docs</a>
+        <a href="#">Contact</a>
+      </dm-navbar>
+    </section>
+
+    <section>
+      <h2 class="dm-heading dm-heading--lg dm-mb-4">Grid Layout</h2>
+      <div class="dm-grid dm-gap-4">
+        <div class="dm-col-12 dm-col-md-4 dm-card dm-p-4">Column 1</div>
+        <div class="dm-col-12 dm-col-md-4 dm-card dm-p-4">Column 2</div>
+        <div class="dm-col-12 dm-col-md-4 dm-card dm-p-4">Column 3</div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
