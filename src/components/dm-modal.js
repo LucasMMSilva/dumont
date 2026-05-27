@@ -102,7 +102,7 @@ class DmModal extends HTMLElement {
           width: min(100%, 520px);
           max-height: min(100vh, 90vh);
           background: #ffffff;
-          border-radius: 1rem;
+          border-radius: 3px;
           box-shadow: 0 24px 32px rgba(15, 23, 42, 0.2);
           padding: 1.5rem;
           overflow: auto;
@@ -123,12 +123,15 @@ class DmModal extends HTMLElement {
         }
         .dm-modal__close {
           all: unset;
-          width: 2.5rem;
-          height: 2.5rem;
+          position: absolute;
+          top: calc(1.5rem - 22px);
+          right: calc(1.5rem - 22px);
+          width: 2rem;
+          height: 2rem;
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          border-radius: 9999px;
+          border-radius: 2;
           cursor: pointer;
           color: #334155;
           transition: background-color 0.2s ease;
