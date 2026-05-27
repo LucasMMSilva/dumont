@@ -34,7 +34,7 @@ class DmAlert extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <style>
-        .dm-alert { border-radius: 3px; padding: 1rem 1.25rem; border: 1px solid transparent; background: #f8fafc; color: #0f172a; }
+        .dm-alert { border-radius: 3px; padding: 0.4rem 1.25rem; border: 1px solid transparent; background: #f8fafc; color: #0f172a; font-size: 0.9rem; }
         .dm-alert--success { background: rgba(47, 133, 90, 0.12); border-color: #2f855a; }
         .dm-alert--warning { background: rgba(214, 158, 46, 0.14); border-color: #d69e2e; }
         .dm-alert--danger { background: rgba(229, 62, 62, 0.12); border-color: #e53e3e; }
