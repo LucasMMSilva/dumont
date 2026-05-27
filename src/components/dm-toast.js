@@ -35,11 +35,11 @@ class DmToast extends HTMLElement {
         :host { display: block; animation: dm-toast-enter 0.2s ease-out both; }
 
         .dm-toast {
-          border-radius: 0.75rem;
-          padding: 1rem 1.25rem;
+          border-radius: 3px;
+          padding: 0.8rem 1.25rem;
           border: 1px solid transparent;
-          background: rgba(248, 250, 252, 0.92);
-          color: #0f172a;
+          background: rgba(27, 78, 129, 0.92);
+          color: white;
           box-shadow: 0 16px 20px rgba(15, 23, 42, 0.12);
           backdrop-filter: blur(8px);
           min-width: 280px;
@@ -47,10 +47,10 @@ class DmToast extends HTMLElement {
           overflow-wrap: break-word;
         }
 
-        .dm-toast--success { background: rgba(47, 133, 90, 0.12); border-color: #2f855a; }
-        .dm-toast--warning { background: rgba(214, 158, 46, 0.14); border-color: #d69e2e; }
-        .dm-toast--danger { background: rgba(229, 62, 62, 0.12); border-color: #e53e3e; }
-        .dm-toast--info { background: rgba(14, 165, 233, 0.14); border-color: #0ea5e9; }
+        .dm-toast--success { background: #2f855a; }
+        .dm-toast--warning { background: #d69e2e; }
+        .dm-toast--danger { background: #e53e3e; }
+        .dm-toast--info { background: #0ea5e9; }
 
         @keyframes dm-toast-enter {
           from { opacity: 0; transform: translateY(-8px); }
