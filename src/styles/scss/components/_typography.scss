@@ -1,12 +1,199 @@
 @import '../abstracts/variables';
 
+/* ========== Heading Classes ========== */
+.dm-heading {
+  margin: 0 0 $dm-spacing-4 0;
+  color: $dm-color-neutral-900;
+  line-height: $dm-line-height-heading;
+  font-weight: $dm-font-weight-bold;
+}
+
+.dm-heading--h1,
+.dm-heading--1xl { font-size: $dm-font-size-3xl; }
+
+.dm-heading--h2,
+.dm-heading--2xl { font-size: $dm-font-size-2xl; }
+
+.dm-heading--h3,
+.dm-heading--xl { font-size: $dm-font-size-xl; }
+
+.dm-heading--h4,
+.dm-heading--lg { font-size: $dm-font-size-lg; }
+
+.dm-heading--h5,
+.dm-heading--base { font-size: $dm-font-size-base; }
+
+.dm-heading--h6 { font-size: $dm-font-size-base; font-weight: $dm-font-weight-semibold; }
+
+/* ========== Paragraph & Text Classes ========== */
+.dm-paragraph {
+  margin: 0 0 $dm-spacing-4 0;
+  color: $dm-color-neutral-700;
+  line-height: $dm-line-height-base;
+  font-size: $dm-font-size-base;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.dm-text {
+  color: $dm-color-neutral-700;
+  font-size: $dm-font-size-base;
+  line-height: $dm-line-height-base;
+}
+
+.dm-text--lead {
+  font-size: $dm-font-size-lg;
+  font-weight: $dm-font-weight-medium;
+  color: $dm-color-neutral-900;
+}
+
+.dm-text--small {
+  font-size: $dm-font-size-sm;
+  color: $dm-color-neutral-500;
+}
+
+.dm-text--xs {
+  font-size: $dm-font-size-xs;
+  color: $dm-color-neutral-500;
+}
+
+/* ========== Text Alignment Utilities ========== */
+.dm-text-left { text-align: left; }
 .dm-text-center { text-align: center; }
 .dm-text-right { text-align: right; }
-.dm-text-left { text-align: left; }
+.dm-text-justify { text-align: justify; }
 
+/* ========== Text Weight Utilities ========== */
+.dm-text-regular { font-weight: $dm-font-weight-regular; }
+.dm-text-medium { font-weight: $dm-font-weight-medium; }
+.dm-text-semibold { font-weight: $dm-font-weight-semibold; }
+.dm-text-bold { font-weight: $dm-font-weight-bold; }
+
+/* ========== Text Color Utilities ========== */
+.dm-text-primary { color: $dm-color-primary; }
+.dm-text-secondary { color: $dm-color-secondary; }
+.dm-text-success { color: $dm-color-success; }
+.dm-text-danger { color: $dm-color-danger; }
+.dm-text-warning { color: $dm-color-warning; }
+.dm-text-info { color: $dm-color-info; }
+.dm-text-neutral { color: $dm-color-neutral-700; }
 .dm-text-muted { color: $dm-color-neutral-500; }
-.dm-text-strong { font-weight: $dm-font-weight-semibold; }
+.dm-text-neutral-900 { color: $dm-color-neutral-900; }
 
-.dm-heading, .dm-text {
-  margin: 0;
+/* ========== Text Styling ========== */
+.dm-text-strong,
+.dm-text-bold { font-weight: $dm-font-weight-bold; }
+
+.dm-text-italic { font-style: italic; }
+.dm-text-underline { text-decoration: underline; }
+.dm-text-strikethrough { text-decoration: line-through; }
+.dm-text-uppercase { text-transform: uppercase; }
+.dm-text-lowercase { text-transform: lowercase; }
+.dm-text-capitalize { text-transform: capitalize; }
+
+.dm-text-decoration-none { text-decoration: none; }
+
+/* ========== Line Height Utilities ========== */
+.dm-line-height-tight { line-height: 1.2; }
+.dm-line-height-base { line-height: $dm-line-height-base; }
+.dm-line-height-relaxed { line-height: 1.75; }
+.dm-line-height-loose { line-height: 2; }
+
+/* ========== List Styles ========== */
+ul,
+ol {
+  margin: 0 0 $dm-spacing-4 0;
+  padding-left: $dm-spacing-6;
+  color: $dm-color-neutral-700;
+  line-height: $dm-line-height-base;
+
+  li {
+    margin-bottom: $dm-spacing-2;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.dm-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $dm-spacing-4 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    margin-bottom: $dm-spacing-3;
+    color: $dm-color-neutral-700;
+    line-height: $dm-line-height-base;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Unordered List */
+.dm-list--unordered {
+  padding-left: $dm-spacing-6;
+
+  li {
+    list-style-type: disc;
+  }
+}
+
+/* Ordered List */
+.dm-list--ordered {
+  padding-left: $dm-spacing-6;
+
+  li {
+    list-style-type: decimal;
+  }
+}
+
+/* Inline List */
+.dm-list--inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $dm-spacing-4;
+  padding: 0;
+
+  li {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: '·';
+      margin-left: $dm-spacing-4;
+      color: $dm-color-neutral-300;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+}
+
+/* Description List */
+dl {
+  margin: 0 0 $dm-spacing-4 0;
+}
+
+dt {
+  font-weight: $dm-font-weight-semibold;
+  color: $dm-color-neutral-900;
+  margin-top: $dm-spacing-3;
+  margin-bottom: $dm-spacing-1;
+}
+
+dd {
+  margin: 0 0 $dm-spacing-3 0;
+  margin-left: $dm-spacing-5;
+  color: $dm-color-neutral-700;
 }

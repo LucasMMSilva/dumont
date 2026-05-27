@@ -1,13 +1,27 @@
 @import '../abstracts/variables';
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-weight: $dm-font-weight-semibold;
+  margin: 0 0 $dm-spacing-4 0;
+  font-weight: $dm-font-weight-bold;
   line-height: $dm-line-height-heading;
+  color: $dm-color-neutral-900;
 }
+
+h1 { font-size: $dm-font-size-3xl; }
+h2 { font-size: $dm-font-size-2xl; }
+h3 { font-size: $dm-font-size-xl; }
+h4 { font-size: $dm-font-size-lg; }
+h5, h6 { font-size: $dm-font-size-base; font-weight: $dm-font-weight-semibold; }
 
 p {
   margin: 0 0 $dm-spacing-4 0;
+  color: $dm-color-neutral-700;
+  line-height: $dm-line-height-base;
+}
+
+small {
+  font-size: $dm-font-size-sm;
+  color: $dm-color-neutral-500;
 }
 
 .dm-heading {

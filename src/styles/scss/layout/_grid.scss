@@ -7,7 +7,7 @@
 }
 
 @function dm-col-width($span) {
-  @return #{($span / 12) * 100}%;
+  @return calc(#{$span} / 12 * 100%);
 }
 
 @for $i from 1 through 12 {

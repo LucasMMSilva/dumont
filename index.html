@@ -36,10 +36,242 @@
       </section>
 
       <section class="dm-mb-8">
+        <dm-card>
+          <h2 class="dm-heading dm-heading--lg dm-mb-3">Toasts</h2>
+          <p class="dm-text dm-mb-4">Clique em um botão para disparar uma notificação toast.</p>
+          <div class="dm-flex dm-flex-wrap dm-gap-4 dm-mb-4">
+            <dm-button variant="info" data-toast-message="Informação enviada com sucesso!" data-toast-variant="info">Info toast</dm-button>
+            <dm-button variant="success" data-toast-message="Operação concluída!" data-toast-variant="success">Success toast</dm-button>
+            <dm-button variant="warning" data-toast-message="Atenção: verifique os dados." data-toast-variant="warning">Warning toast</dm-button>
+            <dm-button variant="danger" data-toast-message="Erro ao processar a solicitação." data-toast-variant="danger">Danger toast</dm-button>
+          </div>
+          <dm-toast-container></dm-toast-container>
+        </dm-card>
+      </section>
+
+      <section class="dm-mb-8">
+        <dm-card>
+          <h2 class="dm-heading dm-heading--lg dm-mb-3">Badges & Labels</h2>
+          <p class="dm-text dm-mb-4">Use badges para mostrar estados e labels para tags ou categorias.</p>
+          <div class="dm-flex dm-flex-wrap dm-gap-3 dm-mb-4">
+            <span class="dm-badge">Default</span>
+            <span class="dm-badge dm-badge--primary">Primary</span>
+            <span class="dm-badge dm-badge--secondary">Secondary</span>
+            <span class="dm-badge dm-badge--success">Success</span>
+            <span class="dm-badge dm-badge--danger">Danger</span>
+            <span class="dm-badge dm-badge--info">Info</span>
+            <span class="dm-badge dm-badge--warning">Warning</span>
+            <span class="dm-badge dm-badge--outline">Outline</span>
+          </div>
+          <div class="dm-flex dm-flex-wrap dm-gap-3">
+            <span class="dm-label">Label</span>
+            <span class="dm-label dm-label--primary">Primary</span>
+            <span class="dm-label dm-label--secondary">Secondary</span>
+            <span class="dm-label dm-label--success">Success</span>
+            <span class="dm-label dm-label--danger">Danger</span>
+            <span class="dm-label dm-label--info">Info</span>
+            <span class="dm-label dm-label--warning">Warning</span>
+            <span class="dm-label dm-label--outline">Outline</span>
+          </div>
+        </dm-card>
+      </section>
+
+      <section class="dm-mb-8">
+        <dm-card>
+          <h2 class="dm-heading dm-heading--lg dm-mb-3">Modal / Dialog</h2>
+          <p class="dm-text dm-mb-4">Abra um modal interativo e feche com Escape ou clicando fora.</p>
+          <div class="dm-flex dm-flex-wrap dm-gap-4 dm-mb-4">
+            <dm-button variant="primary" data-modal-title="Título do modal" data-modal-content="Este é um diálogo modal simples.">Abrir modal</dm-button>
+            <dm-button variant="secondary" data-modal-title="Outro modal" data-modal-content="Conteúdo diferente no modal de exemplo.">Abrir outro</dm-button>
+          </div>
+          <dm-modal title="Modal Example">
+            <p>Use os botões acima para abrir este modal a partir do JavaScript.</p>
+          </dm-modal>
+        </dm-card>
+      </section>
+
+      <section class="dm-mb-8">
+        <dm-card>
+          <h2 class="dm-heading dm-heading--lg dm-mb-3">Form Inputs</h2>
+          <form class="dm-grid dm-gap-4">
+            <div class="dm-col-12 dm-form-group">
+              <label class="dm-form-label" for="name">Nome completo</label>
+              <input class="dm-form-input" type="text" id="name" name="name" placeholder="Ex: João Silva" />
+            </div>
+
+            <div class="dm-col-12 dm-form-group">
+              <label class="dm-form-label" for="email">E-mail</label>
+              <input class="dm-form-input" type="email" id="email" name="email" placeholder="exemplo@dominio.com" />
+            </div>
+
+            <div class="dm-col-12 dm-form-group">
+              <label class="dm-form-label" for="topic">Assunto</label>
+              <select class="dm-form-select" id="topic" name="topic">
+                <option value="">Selecione um assunto</option>
+                <option value="suporte">Suporte</option>
+                <option value="vendas">Vendas</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+
+            <div class="dm-col-12 dm-form-group">
+              <label class="dm-form-label" for="message">Mensagem</label>
+              <textarea class="dm-form-textarea" id="message" name="message" rows="4" placeholder="Escreva aqui sua mensagem..."></textarea>
+            </div>
+
+            <div class="dm-col-12">
+              <label class="dm-form-checkbox" for="subscribe">
+                <input type="checkbox" id="subscribe" name="subscribe" />
+                Quero receber novidades
+              </label>
+            </div>
+
+            <div class="dm-col-12 dm-form-actions">
+              <button type="submit" class="dm-form-button dm-form-button--primary">Enviar</button>
+              <button type="reset" class="dm-form-button dm-form-button--secondary">Limpar</button>
+            </div>
+          </form>
+        </dm-card>
+      </section>
+
+      <section class="dm-mb-8">
         <dm-navbar brand="Dumont" />
       </section>
 
-      <section>
+      <section class="dm-mb-8">
+        <dm-card>
+          <h2 class="dm-heading dm-heading--lg dm-mb-6">Typography</h2>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Headings Scale</h3>
+            <h1 class="dm-heading dm-heading--h1 dm-mb-2">Heading 1 (3xl)</h1>
+            <p class="dm-text--small dm-mb-4">Use for page titles</p>
+            
+            <h2 class="dm-heading dm-heading--h2 dm-mb-2">Heading 2 (2xl)</h2>
+            <p class="dm-text--small dm-mb-4">Use for section titles</p>
+            
+            <h3 class="dm-heading dm-heading--h3 dm-mb-2">Heading 3 (xl)</h3>
+            <p class="dm-text--small dm-mb-4">Use for subsections</p>
+            
+            <h4 class="dm-heading dm-heading--h4 dm-mb-2">Heading 4 (lg)</h4>
+            <p class="dm-text--small dm-mb-4">Use for sub-subsections</p>
+            
+            <h5 class="dm-heading dm-heading--h5 dm-mb-2">Heading 5 (base)</h5>
+            <p class="dm-text--small dm-mb-4">Use sparingly</p>
+            
+            <h6 class="dm-heading dm-heading--h6">Heading 6 (base, semibold)</h6>
+          </div>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Paragraph Styles</h3>
+            <p class="dm-paragraph">
+              This is a regular paragraph with standard font size and line height. 
+              It's the most common text element used for body content.
+            </p>
+            <p class="dm-text dm-text--lead">
+              This is a lead paragraph (highlighted/intro text) with increased font size and weight.
+              Use this to introduce sections or highlight important content.
+            </p>
+            <p class="dm-text">Standard text element for versatile content.</p>
+            <small class="dm-text--small">This is small text, useful for secondary or supplementary information.</small>
+            <br />
+            <small class="dm-text--xs">Extra small text for captions, footnotes, or very secondary content.</small>
+          </div>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Unordered List</h3>
+            <ul>
+              <li>First item in the list</li>
+              <li>Second item in the list</li>
+              <li>Third item with nested content
+                <ul>
+                  <li>Nested item 1</li>
+                  <li>Nested item 2</li>
+                </ul>
+              </li>
+              <li>Fourth item</li>
+            </ul>
+          </div>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Ordered List</h3>
+            <ol>
+              <li>First step in sequence</li>
+              <li>Second step in sequence</li>
+              <li>Third step with sub-steps
+                <ol>
+                  <li>Sub-step 1</li>
+                  <li>Sub-step 2</li>
+                </ol>
+              </li>
+              <li>Fourth and final step</li>
+            </ol>
+          </div>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Inline List</h3>
+            <ul class="dm-list--inline">
+              <li>First item</li>
+              <li>Second item</li>
+              <li>Third item</li>
+              <li>Fourth item</li>
+            </ul>
+          </div>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Description List</h3>
+            <dl>
+              <dt>Framework</dt>
+              <dd>A minimalist CSS framework with Web Components and SCSS design tokens.</dd>
+              
+              <dt>Version</dt>
+              <dd>1.0.0 - First stable release</dd>
+              
+              <dt>Author</dt>
+              <dd>Design & Development Team</dd>
+            </dl>
+          </div>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Text Alignment</h3>
+            <p class="dm-text-left dm-mb-4">This text is aligned to the left.</p>
+            <p class="dm-text-center dm-mb-4">This text is aligned to the center.</p>
+            <p class="dm-text-right dm-mb-4">This text is aligned to the right.</p>
+            <p class="dm-text-justify">This text is justified. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Text Weight</h3>
+            <p class="dm-text-regular">Regular weight (400) text</p>
+            <p class="dm-text-medium">Medium weight (500) text</p>
+            <p class="dm-text-semibold">Semibold weight (600) text</p>
+            <p class="dm-text-bold">Bold weight (700) text</p>
+          </div>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Text Colors</h3>
+            <p class="dm-text-primary">Primary color text</p>
+            <p class="dm-text-secondary">Secondary color text</p>
+            <p class="dm-text-success">Success color text</p>
+            <p class="dm-text-danger">Danger color text</p>
+            <p class="dm-text-warning">Warning color text</p>
+            <p class="dm-text-info">Info color text</p>
+            <p class="dm-text-muted">Muted color text</p>
+            <p class="dm-text-neutral-900">Neutral 900 (darkest) text</p>
+          </div>
+
+          <div>
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Text Styling</h3>
+            <p><span class="dm-text-strong">Strong text</span> - Use for emphasis</p>
+            <p><span class="dm-text-italic">Italic text</span> - Use for citations or emphasis</p>
+            <p><span class="dm-text-underline">Underlined text</span> - Use for links or emphasis</p>
+            <p><span class="dm-text-strikethrough">Strikethrough text</span> - Use to show removed text</p>
+            <p><span class="dm-text-uppercase">uppercase text</span></p>
+            <p><span class="dm-text-lowercase">LOWERCASE TEXT</span></p>
+            <p><span class="dm-text-capitalize">capitalize text</span></p>
+          </div>
+        </dm-card>
+      </section>
         <h2 class="dm-heading dm-heading--lg dm-mb-4">Grid layout</h2>
         <div class="dm-grid dm-gap-4">
           <div class="dm-col-12 dm-col-sm-6 dm-col-lg-4 dm-card dm-p-4">Column 1</div>
@@ -47,6 +279,190 @@
           <div class="dm-col-12 dm-col-lg-4 dm-card dm-p-4">Column 3</div>
         </div>
       </section>
+
+      <section class="dm-mb-8">
+        <dm-card>
+          <h2 class="dm-heading dm-heading--lg dm-mb-6">Cards</h2>
+          <p class="dm-text dm-text--lead dm-mb-6">
+            Cards são componentes versáteis para agrupar conteúdo relacionado com estilo visual consistente.
+          </p>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Basic Card Grid</h3>
+            <div class="dm-grid dm-gap-4">
+              <div class="dm-col-12 dm-col-md-6 dm-col-lg-4">
+                <dm-card>
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">Card Title</h4>
+                  <p class="dm-text dm-mb-4">This is a basic card with simple content and description text.</p>
+                  <div class="dm-flex dm-gap-2">
+                    <dm-button variant="primary">Action</dm-button>
+                    <dm-button variant="secondary">Learn more</dm-button>
+                  </div>
+                </dm-card>
+              </div>
+
+              <div class="dm-col-12 dm-col-md-6 dm-col-lg-4">
+                <dm-card>
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">Card with Badge</h4>
+                  <div class="dm-mb-3">
+                    <span class="dm-badge dm-badge--primary">New</span>
+                  </div>
+                  <p class="dm-text dm-mb-4">Card with a badge to highlight special content or status indicators.</p>
+                  <dm-button variant="primary">Discover</dm-button>
+                </dm-card>
+              </div>
+
+              <div class="dm-col-12 dm-col-md-6 dm-col-lg-4">
+                <dm-card>
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">Card with Stats</h4>
+                  <div class="dm-grid dm-gap-3 dm-mb-4">
+                    <div class="dm-col-6">
+                      <p class="dm-heading dm-heading--lg dm-text-primary dm-mb-0">1.2K</p>
+                      <p class="dm-text--small dm-text-muted">Downloads</p>
+                    </div>
+                    <div class="dm-col-6">
+                      <p class="dm-heading dm-heading--lg dm-text-success dm-mb-0">4.8★</p>
+                      <p class="dm-text--small dm-text-muted">Rating</p>
+                    </div>
+                  </div>
+                  <dm-button variant="secondary">See details</dm-button>
+                </dm-card>
+              </div>
+            </div>
+          </div>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Cards with Images</h3>
+            <div class="dm-flex dm-flex-wrap dm-gap-4">
+              <div style="flex: 1 1 calc(25% - 1rem); min-width: 220px;">
+                <dm-card image-src="https://picsum.photos/seed/landscape/600/340" image-alt="Mountain landscape">
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">Landscape Card</h4>
+                  <p class="dm-text dm-mb-4">A visual highlight card with an image at the top and supporting description below.</p>
+                  <dm-button variant="primary">Explore</dm-button>
+                </dm-card>
+              </div>
+
+              <div style="flex: 1 1 calc(25% - 1rem); min-width: 220px;">
+                <dm-card image-src="https://picsum.photos/seed/city/600/340" image-alt="City skyline">
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">City Card</h4>
+                  <p class="dm-text dm-mb-4">An image-driven card layout for showcasing featured content.</p>
+                  <dm-button variant="secondary">Discover</dm-button>
+                </dm-card>
+              </div>
+
+              <div style="flex: 1 1 calc(25% - 1rem); min-width: 220px;">
+                <dm-card image-src="https://picsum.photos/seed/nature/600/340" image-alt="Forest scene">
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">Nature Card</h4>
+                  <p class="dm-text dm-mb-4">Use image cards to give your UI an engaging visual hierarchy.</p>
+                  <dm-button variant="primary">View</dm-button>
+                </dm-card>
+              </div>
+
+              <div style="flex: 1 1 calc(25% - 1rem); min-width: 220px;">
+                <dm-card image-src="https://picsum.photos/seed/abstract/600/340" image-alt="Abstract art">
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">Abstract Card</h4>
+                  <p class="dm-text dm-mb-4">A fourth card to complete the grid layout with a balanced visual flow.</p>
+                  <dm-button variant="secondary">Learn more</dm-button>
+                </dm-card>
+              </div>
+            </div>
+          </div>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Feature Cards</h3>
+            <div class="dm-grid dm-gap-4">
+              <div class="dm-col-12 dm-col-md-6">
+                <dm-card>
+                  <div class="dm-mb-4">
+                    <span class="dm-heading dm-heading--2xl" role="img" aria-label="lightning">⚡</span>
+                  </div>
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">Performance</h4>
+                  <p class="dm-text">Lightning-fast CSS framework optimized for production use.</p>
+                </dm-card>
+              </div>
+
+              <div class="dm-col-12 dm-col-md-6">
+                <dm-card>
+                  <div class="dm-mb-4">
+                    <span class="dm-heading dm-heading--2xl" role="img" aria-label="accessibility">♿</span>
+                  </div>
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">Accessible</h4>
+                  <p class="dm-text">Built with WCAG guidelines ensuring inclusive user experiences.</p>
+                </dm-card>
+              </div>
+
+              <div class="dm-col-12 dm-col-md-6">
+                <dm-card>
+                  <div class="dm-mb-4">
+                    <span class="dm-heading dm-heading--2xl" role="img" aria-label="responsive">📱</span>
+                  </div>
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">Responsive</h4>
+                  <p class="dm-text">Works beautifully on all device sizes with breakpoint utilities.</p>
+                </dm-card>
+              </div>
+
+              <div class="dm-col-12 dm-col-md-6">
+                <dm-card>
+                  <div class="dm-mb-4">
+                    <span class="dm-heading dm-heading--2xl" role="img" aria-label="customizable">🎨</span>
+                  </div>
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">Customizable</h4>
+                  <p class="dm-text">SCSS tokens and variables for easy theming and customization.</p>
+                </dm-card>
+              </div>
+            </div>
+          </div>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Horizontal Card</h3>
+            <dm-card>
+              <div class="dm-grid dm-gap-4 dm-align-items-center">
+                <div class="dm-col-12 dm-col-md-8">
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">Horizontal Layout Card</h4>
+                  <p class="dm-text dm-mb-4">This card demonstrates a horizontal layout with content on one side and actions on the other.</p>
+                  <div class="dm-flex dm-gap-2">
+                    <dm-button variant="primary">Primary</dm-button>
+                    <dm-button variant="outline">Outline</dm-button>
+                  </div>
+                </div>
+                <div class="dm-col-12 dm-col-md-4 dm-text-center">
+                  <span class="dm-heading dm-heading--3xl">📦</span>
+                </div>
+              </div>
+            </dm-card>
+          </div>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Card Variations</h3>
+            <div class="dm-grid dm-gap-4">
+              <div class="dm-col-12 dm-col-md-4">
+                <dm-card>
+                  <p class="dm-badge dm-badge--success dm-mb-3">Success</p>
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">Completed</h4>
+                  <p class="dm-text--small">All tasks have been successfully completed.</p>
+                </dm-card>
+              </div>
+
+              <div class="dm-col-12 dm-col-md-4">
+                <dm-card>
+                  <p class="dm-badge dm-badge--warning dm-mb-3">Pending</p>
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">In Progress</h4>
+                  <p class="dm-text--small">Processing your request, please wait.</p>
+                </dm-card>
+              </div>
+
+              <div class="dm-col-12 dm-col-md-4">
+                <dm-card>
+                  <p class="dm-badge dm-badge--danger dm-mb-3">Error</p>
+                  <h4 class="dm-heading dm-heading--md dm-mb-2">Failed</h4>
+                  <p class="dm-text--small">Something went wrong. Please try again.</p>
+                </dm-card>
+              </div>
+            </div>
+          </div>
+        </dm-card>
+      </section>
+
     </main>
 
     <script type="module" src="src/main.js"></script>

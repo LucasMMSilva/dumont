@@ -35,6 +35,50 @@
     </section>
 
     <section class="dm-mb-8">
+      <h2 class="dm-heading dm-heading--lg dm-mb-4">Form Inputs</h2>
+      <div class="dm-card">
+        <form class="dm-grid dm-gap-4">
+          <div class="dm-col-12 dm-form-group">
+            <label class="dm-form-label" for="name">Nome completo</label>
+            <input class="dm-form-input" type="text" id="name" name="name" placeholder="Ex: João Silva" />
+          </div>
+
+          <div class="dm-col-12 dm-form-group">
+            <label class="dm-form-label" for="email">E-mail</label>
+            <input class="dm-form-input" type="email" id="email" name="email" placeholder="exemplo@dominio.com" />
+          </div>
+
+          <div class="dm-col-12 dm-form-group">
+            <label class="dm-form-label" for="topic">Assunto</label>
+            <select class="dm-form-select" id="topic" name="topic">
+              <option value="">Selecione um assunto</option>
+              <option value="suporte">Suporte</option>
+              <option value="vendas">Vendas</option>
+              <option value="feedback">Feedback</option>
+            </select>
+          </div>
+
+          <div class="dm-col-12 dm-form-group">
+            <label class="dm-form-label" for="message">Mensagem</label>
+            <textarea class="dm-form-textarea" id="message" name="message" rows="4" placeholder="Escreva aqui sua mensagem..."></textarea>
+          </div>
+
+          <div class="dm-col-12">
+            <label class="dm-form-checkbox" for="subscribe">
+              <input type="checkbox" id="subscribe" name="subscribe" />
+              Quero receber novidades
+            </label>
+          </div>
+
+          <div class="dm-col-12 dm-form-actions">
+            <button type="submit" class="dm-form-button dm-form-button--primary">Enviar</button>
+            <button type="reset" class="dm-form-button dm-form-button--secondary">Limpar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="dm-mb-8">
       <h2 class="dm-heading dm-heading--lg dm-mb-4">Navbar</h2>
       <dm-navbar brand="Dumont Test">
         <a href="#">Home</a>

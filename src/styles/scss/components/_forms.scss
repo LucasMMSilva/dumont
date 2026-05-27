@@ -1,0 +1,95 @@
+@import '../abstracts/variables';
+
+.dm-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: $dm-spacing-2;
+}
+
+.dm-form-label {
+  font-weight: $dm-font-weight-semibold;
+  color: $dm-color-neutral-900;
+}
+
+.dm-form-input,
+.dm-form-textarea,
+.dm-form-select {
+  width: 100%;
+  min-height: $dm-spacing-8;
+  padding: $dm-spacing-3;
+  border-radius: $dm-radius-md;
+  border: 1px solid $dm-color-neutral-300;
+  background-color: #ffffff;
+  color: $dm-color-neutral-900;
+  font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dm-form-select {
+  appearance: none;
+}
+
+.dm-form-input:focus,
+.dm-form-textarea:focus,
+.dm-form-select:focus {
+  outline: none;
+  border-color: $dm-color-primary;
+  box-shadow: 0 0 0 3px rgba(44, 123, 229, 0.12);
+}
+
+.dm-form-textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.dm-form-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: $dm-spacing-2;
+  font-size: 0.95rem;
+  color: $dm-color-neutral-900;
+}
+
+.dm-form-checkbox input {
+  width: auto;
+  margin: 0;
+}
+
+.dm-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $dm-spacing-3;
+  align-items: center;
+}
+
+.dm-form-button {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(#{$dm-spacing-3} * 0.4444444) $dm-spacing-4;
+  border-radius: $dm-radius-md;
+  cursor: pointer;
+  font: inherit;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.dm-form-button:hover {
+  transform: translateY(-1px);
+}
+
+.dm-form-button--primary {
+  background-color: $dm-color-primary;
+  color: #ffffff;
+}
+
+.dm-form-button--secondary {
+  background-color: $dm-color-neutral-100;
+  color: $dm-color-neutral-900;
+}
+
+.dm-form-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
