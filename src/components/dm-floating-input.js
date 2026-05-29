@@ -32,18 +32,28 @@ class DmFloatingInput extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this._inputId = `dm-floating-input-${DmFloatingInput.idCounter++}`;
     this._currentValue = this.getAttribute('value') || '';
+    this._onInput = this._onInput.bind(this);
+    this._onChange = this._onChange.bind(this);
   }
 
   connectedCallback() {
     this.render();
   }
 
-  attributeChangedCallback(name) {
+  attributeChangedCallback(name, oldValue, newValue) {
     if (name === 'value') {
-      this._currentValue = this.getAttribute('value') || '';
+      this._currentValue = newValue || '';
       const input = this.shadowRoot.querySelector('input');
-      if (input) {
+      if (input && input.value !== this._currentValue) {
+        const focused = input === this.shadowRoot.activeElement;
+        const selectionStart = input.selectionStart;
+        const selectionEnd = input.selectionEnd;
+
         input.value = this._currentValue;
+
+        if (focused && selectionStart !== null && selectionEnd !== null) {
+          input.setSelectionRange(selectionStart, selectionEnd);
+        }
       }
       return;
     }
@@ -64,12 +74,16 @@ class DmFloatingInput extends HTMLElement {
   }
 
   set value(value) {
-    if (value === null || value === undefined) {
-      this._currentValue = '';
+    const stringValue = value === null || value === undefined ? '' : String(value);
+    if (this._currentValue === stringValue) {
+      return;
+    }
+
+    this._currentValue = stringValue;
+    if (stringValue === '') {
       this.removeAttribute('value');
     } else {
-      this._currentValue = String(value);
-      this.setAttribute('value', this._currentValue);
+      this.setAttribute('value', stringValue);
     }
   }
 
@@ -101,6 +115,11 @@ class DmFloatingInput extends HTMLElement {
     const type = ['text', 'email', 'password', 'tel', 'number', 'url', 'search'].includes(this.type)
       ? this.type
       : 'text';
+
+    const previousInput = this.shadowRoot.querySelector('input');
+    const wasFocused = previousInput && previousInput === this.shadowRoot.activeElement;
+    const selectionStart = wasFocused ? previousInput.selectionStart : null;
+    const selectionEnd = wasFocused ? previousInput.selectionEnd : null;
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -186,23 +205,32 @@ class DmFloatingInput extends HTMLElement {
     `;
 
     const input = this.shadowRoot.querySelector('input');
+    input.addEventListener('input', this._onInput);
+    input.addEventListener('change', this._onChange);
 
-    input.addEventListener('input', () => {
-      this._currentValue = input.value;
-      this.dispatchEvent(new CustomEvent('dm:input', {
-        detail: { value: input.value },
-        bubbles: true,
-        composed: true,
-      }));
-    });
+    if (wasFocused && input && selectionStart !== null && selectionEnd !== null) {
+      input.focus();
+      input.setSelectionRange(selectionStart, selectionEnd);
+    }
+  }
 
-    input.addEventListener('change', () => {
-      this.dispatchEvent(new CustomEvent('dm:change', {
-        detail: { value: input.value },
-        bubbles: true,
-        composed: true,
-      }));
-    });
+  _onInput(event) {
+    const value = event.target.value;
+    this._currentValue = value;
+    this.dispatchEvent(new CustomEvent('dm:input', {
+      detail: { value },
+      bubbles: true,
+      composed: true,
+    }));
+  }
+
+  _onChange(event) {
+    const value = event.target.value;
+    this.dispatchEvent(new CustomEvent('dm:change', {
+      detail: { value },
+      bubbles: true,
+      composed: true,
+    }));
   }
 }
 
