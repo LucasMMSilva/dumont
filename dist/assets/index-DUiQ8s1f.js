@@ -1,33 +1,49 @@
-(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))r(t);new MutationObserver(t=>{for(const a of t)if(a.type==="childList")for(const n of a.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&r(n)}).observe(document,{childList:!0,subtree:!0});function s(t){const a={};return t.integrity&&(a.integrity=t.integrity),t.referrerPolicy&&(a.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?a.credentials="include":t.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function r(t){if(t.ep)return;t.ep=!0;const a=s(t);fetch(t.href,a)}})();class d extends HTMLElement{static get observedAttributes(){return["variant","size","disabled"]}constructor(){super(),this.attachShadow({mode:"open"})}connectedCallback(){this.render()}attributeChangedCallback(){this.render()}get variant(){return this.getAttribute("variant")||"primary"}get size(){return this.getAttribute("size")||"medium"}get disabled(){return this.hasAttribute("disabled")}render(){const e=this.disabled?"disabled":"",s=`dm-btn dm-btn--${this.variant}`,r=this.size!=="medium"?`dm-btn--${this.size}`:"";this.shadowRoot.innerHTML=`
+(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))r(t);new MutationObserver(t=>{for(const a of t)if(a.type==="childList")for(const i of a.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&r(i)}).observe(document,{childList:!0,subtree:!0});function s(t){const a={};return t.integrity&&(a.integrity=t.integrity),t.referrerPolicy&&(a.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?a.credentials="include":t.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function r(t){if(t.ep)return;t.ep=!0;const a=s(t);fetch(t.href,a)}})();class d extends HTMLElement{static get observedAttributes(){return["variant","size","disabled"]}constructor(){super(),this.attachShadow({mode:"open"})}connectedCallback(){this.render()}attributeChangedCallback(){this.render()}get variant(){return this.getAttribute("variant")||"primary"}get size(){return this.getAttribute("size")||"medium"}get disabled(){return this.hasAttribute("disabled")}render(){const e=this.disabled?"disabled":"",s=`dm-btn dm-btn--${this.variant}`,r=this.size!=="medium"?`dm-btn--${this.size}`:"";this.shadowRoot.innerHTML=`
       <style>
         :host { display: inline-block; }
-        .dm-btn { all: unset; display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1rem; border-radius: 3px; cursor: pointer; font: inherit; font-size: 1rem; border: 1px solid transparent; transition: transform 0.2s ease, background-color 0.2s ease; }
-        .dm-btn:hover { transform: translateY(-1px); }
+        .dm-btn { all: unset; display: inline-flex; align-items: center; justify-content: center; padding: 0.3rem 1rem; border-radius: 3px; cursor: pointer; font: inherit; font-size: 1rem; border: 1px solid transparent; transition: transform 0.2s ease, background-color 0.2s ease; }
         .dm-btn:focus-visible { outline: 3px solid rgba(44, 123, 229, 0.35); outline-offset: 2px; }
-        .dm-btn--primary { background: #2c7be5; color: white; }
-        .dm-btn--secondary { background: #6f42c1; color: white; }
-        .dm-btn--success { background: #2f855a; color: white; }
-        .dm-btn--danger { background: #e53e3e; color: white; }
-        .dm-btn--warning { background: #d69e2e; color: #0f172a; }
-        .dm-btn--info { background: #0ea5e9; color: white; }
+        .dm-btn--primary { background: #2c7be5; color: white; border: 1px solid #2c7be5; }
+        .dm-btn--secondary { background: #6f42c1; color: white; border: 1px solid #6f42c1; }
+        .dm-btn--success { background: #2f855a; color: white; border: 1px solid #2f855a; }
+        .dm-btn--danger { background: #e53e3e; color: white; border: 1px solid #e53e3e; }
+        .dm-btn--warning { background: #d69e2e; color: #0f172a; border: 1px solid #d69e2e; }
+        .dm-btn--info { background: #0ea5e9; color: white; border: 1px solid #0ea5e9; }
+
+        .dm-btn--primary:not([disabled]):hover { background: white; color: #2c7be5; }
+        .dm-btn--secondary:not([disabled]):hover { background: white; color: #6f42c1; }
+        .dm-btn--success:not([disabled]):hover { background: white; color: #2f855a; }
+        .dm-btn--danger:not([disabled]):hover { background: white; color: #e53e3e; }
+        .dm-btn--warning:not([disabled]):hover { background: white; color: #0f172a; }
+        .dm-btn--info:not([disabled]):hover { background: white; color: #0ea5e9; }
+
         .dm-btn--small,
         .dm-btn--large { padding: 0.75rem 1rem; font-size: 1rem; }
-        .dm-btn[disabled] { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+        .dm-btn[disabled] { opacity: 0.5; cursor: not-allowed; transform: none; pointer: none; }
       </style>
+
       <button class="${s} ${r}" ${e}>
         <slot></slot>
       </button>
-    `,this.shadowRoot.querySelector("button").addEventListener("click",t=>{if(this.disabled){t.preventDefault();return}this.dispatchEvent(new CustomEvent("dm:click",{bubbles:!0,composed:!0}))})}}customElements.define("dm-button",d);class l extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    `,this.shadowRoot.querySelector("button").addEventListener("click",t=>{if(this.disabled){t.preventDefault();return}this.dispatchEvent(new CustomEvent("dm:click",{bubbles:!0,composed:!0}))})}}customElements.define("dm-button",d);class l extends HTMLElement{static get observedAttributes(){return["image-src","image-alt"]}constructor(){super(),this.attachShadow({mode:"open"})}connectedCallback(){this.render()}attributeChangedCallback(){this.render()}get imageSrc(){return this.getAttribute("image-src")}get imageAlt(){return this.getAttribute("image-alt")||""}render(){const e=this.imageSrc?`
+        <div class="dm-card__image">
+          <img src="${this.imageSrc}" alt="${this.imageAlt}">
+        </div>
+      `:"";this.shadowRoot.innerHTML=`
       <style>
         :host { display: block; }
         .dm-card { background: white; border-radius: 3px; box-shadow: 0 4px 8px rgba(15, 23, 42, 0.12); border: 1px solid rgba(15, 23, 42, 0.06); padding: 1.5rem; }
+        .dm-card__image { margin: calc(-1 * 1.5rem) calc(-1 * 1.5rem) 1rem; overflow: hidden; border-top-left-radius: 3px; border-top-right-radius: 3px; }
+        .dm-card__image img { width: 100%; height: auto; display: block; object-fit: contain; }
       </style>
       <section class="dm-card" role="region">
+        ${e}
         <slot></slot>
       </section>
     `}}customElements.define("dm-card",l);class c extends HTMLElement{static get observedAttributes(){return["variant"]}constructor(){super(),this.attachShadow({mode:"open"})}connectedCallback(){this.render()}attributeChangedCallback(){this.render()}get variant(){return this.getAttribute("variant")||"info"}render(){const e=`dm-alert dm-alert--${this.variant}`;this.shadowRoot.innerHTML=`
       <style>
-        .dm-alert { border-radius: 3px; padding: 1rem 1.25rem; border: 1px solid transparent; background: #f8fafc; color: #0f172a; }
+        .dm-alert { border-radius: 3px; padding: 0.4rem 1.25rem; border: 1px solid transparent; background: #f8fafc; color: #0f172a; font-size: 0.9rem; }
         .dm-alert--success { background: rgba(47, 133, 90, 0.12); border-color: #2f855a; }
         .dm-alert--warning { background: rgba(214, 158, 46, 0.14); border-color: #d69e2e; }
         .dm-alert--danger { background: rgba(229, 62, 62, 0.12); border-color: #e53e3e; }
@@ -41,11 +57,11 @@
         :host { display: block; animation: dm-toast-enter 0.2s ease-out both; }
 
         .dm-toast {
-          border-radius: 0.75rem;
-          padding: 1rem 1.25rem;
+          border-radius: 3px;
+          padding: 0.8rem 1.25rem;
           border: 1px solid transparent;
-          background: rgba(248, 250, 252, 0.92);
-          color: #0f172a;
+          background: rgba(27, 78, 129, 0.92);
+          color: white;
           box-shadow: 0 16px 20px rgba(15, 23, 42, 0.12);
           backdrop-filter: blur(8px);
           min-width: 280px;
@@ -53,10 +69,10 @@
           overflow-wrap: break-word;
         }
 
-        .dm-toast--success { background: rgba(47, 133, 90, 0.12); border-color: #2f855a; }
-        .dm-toast--warning { background: rgba(214, 158, 46, 0.14); border-color: #d69e2e; }
-        .dm-toast--danger { background: rgba(229, 62, 62, 0.12); border-color: #e53e3e; }
-        .dm-toast--info { background: rgba(14, 165, 233, 0.14); border-color: #0ea5e9; }
+        .dm-toast--success { background: #2f855a; }
+        .dm-toast--warning { background: #d69e2e; }
+        .dm-toast--danger { background: #e53e3e; }
+        .dm-toast--info { background: #0ea5e9; }
 
         @keyframes dm-toast-enter {
           from { opacity: 0; transform: translateY(-8px); }
@@ -100,7 +116,7 @@
           width: min(100%, 520px);
           max-height: min(100vh, 90vh);
           background: #ffffff;
-          border-radius: 1rem;
+          border-radius: 3px;
           box-shadow: 0 24px 32px rgba(15, 23, 42, 0.2);
           padding: 1.5rem;
           overflow: auto;
@@ -121,12 +137,15 @@
         }
         .dm-modal__close {
           all: unset;
-          width: 2.5rem;
-          height: 2.5rem;
+          position: absolute;
+          top: calc(1.5rem - 22px);
+          right: calc(1.5rem - 22px);
+          width: 2rem;
+          height: 2rem;
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          border-radius: 9999px;
+          border-radius: 2;
           cursor: pointer;
           color: #334155;
           transition: background-color 0.2s ease;
@@ -162,4 +181,4 @@
         <div class="brand">${this.brand}</div>
         <div class="links"><slot></slot></div>
       </nav>
-    `}}customElements.define("dm-navbar",h);const i=document.querySelector("dm-toast-container"),p=document.querySelectorAll("[data-toast-message]");p.forEach(o=>{o.addEventListener("dm:click",()=>{const e=o.dataset.toastMessage,s=o.dataset.toastVariant||"info",r=Number(o.dataset.toastDuration)||4e3;i&&i.show(e,s,r)})});const g=document.querySelector("dm-modal"),f=document.querySelectorAll("[data-modal-title]");f.forEach(o=>{o.addEventListener("dm:click",()=>{const e=o.dataset.modalTitle||"Modal Dialog",s=o.dataset.modalContent||"This is a simple modal dialog.",r=g;r&&(r.setAttribute("title",e),r.innerHTML=`<p>${s}</p>`,r.show())})});
+    `}}customElements.define("dm-navbar",h);const n=document.querySelector("dm-toast-container"),p=document.querySelectorAll("[data-toast-message]");p.forEach(o=>{o.addEventListener("dm:click",()=>{const e=o.dataset.toastMessage,s=o.dataset.toastVariant||"info",r=Number(o.dataset.toastDuration)||4e3;n&&n.show(e,s,r)})});const g=document.querySelector("dm-modal"),f=document.querySelectorAll("[data-modal-title]");f.forEach(o=>{o.addEventListener("dm:click",()=>{const e=o.dataset.modalTitle||"Modal Dialog",s=o.dataset.modalContent||"This is a simple modal dialog.",r=g;r&&(r.setAttribute("title",e),r.innerHTML=`<p>${s}</p>`,r.show())})});

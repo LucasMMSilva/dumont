@@ -5,6 +5,7 @@ import './components/dm-alert.js';
 import './components/dm-toast.js';
 import './components/dm-modal.js';
 import './components/dm-navbar.js';
+import './components/dm-floating-input.js';
 
 const toastContainer = document.querySelector('dm-toast-container');
 const toastButtons = document.querySelectorAll('[data-toast-message]');
