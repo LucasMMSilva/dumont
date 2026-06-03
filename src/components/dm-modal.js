@@ -84,17 +84,25 @@ class DmModal extends HTMLElement {
   }
 
   render() {
-    const hidden = this.open ? '' : 'hidden';
     const titleText = this.title;
 
     this.shadowRoot.innerHTML = `
       <style>
-        :host { position: fixed; inset: 0; display: ${this.open ? 'flex' : 'none'}; align-items: center; justify-content: center; z-index: 10000; }
+        :host { 
+          position: fixed; 
+          inset: 0; 
+          display: ${this.open ? 'flex' : 'none'}; 
+          align-items: center; 
+          justify-content: center; 
+          z-index: 10000;
+          pointer-events: ${this.open ? 'auto' : 'none'};
+        }
         .dm-modal__overlay {
           position: fixed;
           inset: 0;
           background: rgba(15, 23, 42, 0.45);
           backdrop-filter: blur(3px);
+          pointer-events: auto;
         }
         .dm-modal__dialog {
           position: relative;
@@ -107,6 +115,7 @@ class DmModal extends HTMLElement {
           padding: 1.5rem;
           overflow: auto;
           outline: none;
+          pointer-events: auto;
         }
         .dm-modal__header {
           display: flex;
