@@ -453,6 +453,33 @@
         </dm-card>
       </section>
 
+      <section class="dm-mb-8">
+        <dm-card>
+          <h2 class="dm-heading dm-heading--lg dm-mb-6">Carousel</h2>
+          <p class="dm-text dm-text--lead dm-mb-6">
+            Carrossel de imagens com navegação automática, manual e indicadores.
+          </p>
+
+          <div class="dm-mb-8">
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Basic Carousel</h3>
+            <dm-carousel interval="5000" style=" margin: 0 auto;">
+              <dm-carousel-slide image="https://picsum.photos/800/400?random=1" title="Primeiro Slide" description="Descrição do primeiro slide"></dm-carousel-slide>
+              <dm-carousel-slide image="https://picsum.photos/800/400?random=2" title="Segundo Slide" description="Descrição do segundo slide"></dm-carousel-slide>
+              <dm-carousel-slide image="https://picsum.photos/800/400?random=3" title="Terceiro Slide" description="Descrição do terceiro slide"></dm-carousel-slide>
+            </dm-carousel>
+          </div>
+
+          <div>
+            <h3 class="dm-heading dm-heading--md dm-mb-4">Carousel Attributes</h3>
+            <ul>
+              <li><code>interval</code>: tempo em milissegundos entre mudanças automáticas (padrão: 5000)</li>
+              <li><code>autoplay</code>: ativa/desativa reprodução automática (padrão: true)</li>
+            </ul>
+            <p class="dm-text--small dm-text-muted dm-mt-4">Navegue com os botões de seta ou use os indicadores de ponto para saltar diretamente para um slide específico.</p>
+          </div>
+        </dm-card>
+      </section>
+
     </main>
 
     <script type="module" src="src/main.js"></script>

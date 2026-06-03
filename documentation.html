@@ -20,6 +20,7 @@
           <li><a href="#dm-alert">dm-alert</a></li>
           <li><a href="#dm-button">dm-button</a></li>
           <li><a href="#dm-card">dm-card</a></li>
+          <li><a href="#dm-carousel">dm-carousel</a></li>
           <li><a href="#dm-floating-input">dm-floating-input</a></li>
           <li><a href="#dm-modal">dm-modal</a></li>
           <li><a href="#dm-navbar">dm-navbar</a></li>
@@ -76,6 +77,7 @@ npm run dev</code></pre>
             <li><a href="#dm-alert">dm-alert</a></li>
             <li><a href="#dm-button">dm-button</a></li>
             <li><a href="#dm-card">dm-card</a></li>
+            <li><a href="#dm-carousel">dm-carousel</a></li>
             <li><a href="#dm-floating-input">dm-floating-input</a></li>
             <li><a href="#dm-modal">dm-modal</a></li>
             <li><a href="#dm-navbar">dm-navbar</a></li>
@@ -149,6 +151,31 @@ npm run dev</code></pre>
             <div class="demo"><dm-floating-input label="Email" type="email" name="email" placeholder="Digite seu email"></dm-floating-input></div>
             <div class="code-block">
               <pre><button class="copy-btn" type="button" aria-label="Copiar código">📋</button><code>&lt;dm-floating-input label="Email" type="email" name="email" placeholder="Digite seu email" /&gt;</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="dm-carousel">
+          <h3>dm-carousel</h3>
+          <p>Carrossel de imagens com navegação automática e manual.</p>
+          <p>Atributos:</p>
+          <ul>
+            <li><code>interval</code>: intervalo de transição automática em milissegundos (padrão: 5000)</li>
+            <li><code>autoplay</code>: ativa/desativa reprodução automática (padrão: true)</li>
+          </ul>
+          <div class="example">
+            <div class="demo" style="max-width:600px;margin:0 auto">
+              <dm-carousel interval="5000">
+                <dm-carousel-slide image="https://picsum.photos/800/400?random=1" title="Primeiro Slide" description="Descrição do primeiro slide"></dm-carousel-slide>
+                <dm-carousel-slide image="https://picsum.photos/800/400?random=2" title="Segundo Slide" description="Descrição do segundo slide"></dm-carousel-slide>
+                <dm-carousel-slide image="https://picsum.photos/800/400?random=3" title="Terceiro Slide" description="Descrição do terceiro slide"></dm-carousel-slide>
+              </dm-carousel>
+            </div>
+            <div class="code-block">
+              <pre><button class="copy-btn" type="button" aria-label="Copiar código">📋</button><code>&lt;dm-carousel interval="5000"&gt;
+  &lt;dm-carousel-slide image="url" title="Título" description="Descrição"&gt;&lt;/dm-carousel-slide&gt;
+  &lt;dm-carousel-slide image="url" title="Título 2" description="Descrição 2"&gt;&lt;/dm-carousel-slide&gt;
+&lt;/dm-carousel&gt;</code></pre>
             </div>
           </div>
         </section>
@@ -253,6 +280,7 @@ npm run dev</code></pre>
     import './src/components/dm-alert.js';
     import './src/components/dm-button.js';
     import './src/components/dm-card.js';
+    import './src/components/dm-carousel.js';
     import './src/components/dm-floating-input.js';
     import './src/components/dm-navbar.js';
     import './src/components/dm-toast.js';

@@ -7,6 +7,7 @@ import './components/dm-modal.js';
 import './components/dm-navbar.js';
 import './components/dm-floating-input.js';
 import './components/dm-toggle.js';
+import './components/dm-carousel.js';
 
 const toastContainer = document.querySelector('dm-toast-container');
 const toastButtons = document.querySelectorAll('[data-toast-message]');
