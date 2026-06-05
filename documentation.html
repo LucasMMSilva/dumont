@@ -20,6 +20,7 @@
           <li><a href="#dm-alert">dm-alert</a></li>
           <li><a href="#dm-button">dm-button</a></li>
           <li><a href="#dm-card">dm-card</a></li>
+          <li><a href="#dm-jumbotron">dm-jumbotron</a></li>
           <li><a href="#dm-carousel">dm-carousel</a></li>
           <li><a href="#dm-floating-input">dm-floating-input</a></li>
           <li><a href="#dm-modal">dm-modal</a></li>
@@ -77,6 +78,7 @@ npm run dev</code></pre>
             <li><a href="#dm-alert">dm-alert</a></li>
             <li><a href="#dm-button">dm-button</a></li>
             <li><a href="#dm-card">dm-card</a></li>
+            <li><a href="#dm-jumbotron">dm-jumbotron</a></li>
             <li><a href="#dm-carousel">dm-carousel</a></li>
             <li><a href="#dm-floating-input">dm-floating-input</a></li>
             <li><a href="#dm-modal">dm-modal</a></li>
@@ -133,6 +135,26 @@ npm run dev</code></pre>
   &lt;h4&gt;Título do card&lt;/h4&gt;
   &lt;p&gt;Texto descritivo do conteúdo.&lt;/p&gt;
 &lt;/dm-card&gt;</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="dm-jumbotron">
+          <h3>dm-jumbotron</h3>
+          <p>Seção hero que destaca título, subtítulo e ações dentro de um bloco visual chamativo.</p>
+          <p>Atributos:</p>
+          <ul>
+            <li><code>title</code>: texto principal do jumbotron</li>
+            <li><code>subtitle</code>: texto secundário descritivo</li>
+            <li><code>variant</code>: <strong>default</strong>, <strong>primary</strong>, <strong>dark</strong>, <strong>light</strong></li>
+            <li><code>background</code>: URL opcional para imagem de fundo</li>
+          </ul>
+          <div class="example">
+            <div class="demo"><dm-jumbotron title="Bem-vindo ao Dumont" subtitle="Componentes leves para interfaces modernas." background="https://picsum.photos/1200/420?blur=3"><dm-button variant="primary">Começar</dm-button></dm-jumbotron></div>
+            <div class="code-block">
+              <pre><button class="copy-btn" type="button" aria-label="Copiar código">📋</button><code>&lt;dm-jumbotron title="Bem-vindo ao Dumont" subtitle="Componentes leves para interfaces modernas." background="https://picsum.photos/1200/420?blur=3"&gt;
+  &lt;dm-button variant="primary"&gt;Começar&lt;/dm-button&gt;
+&lt;/dm-jumbotron&gt;</code></pre>
             </div>
           </div>
         </section>
@@ -283,11 +305,7 @@ npm run dev</code></pre>
     import './src/components/dm-alert.js';
     import './src/components/dm-button.js';
     import './src/components/dm-card.js';
-    import './src/components/dm-carousel.js';
-    import './src/components/dm-floating-input.js';
-    import './src/components/dm-navbar.js';
-    import './src/components/dm-toast.js';
-    import './src/components/dm-toggle.js';
+      import './src/components/dm-jumbotron.js';
   </script>
 
   <script>
