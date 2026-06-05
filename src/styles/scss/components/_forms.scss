@@ -50,9 +50,15 @@
   color: $dm-color-neutral-900;
 }
 
-.dm-form-checkbox input {
+.dm-form-checkbox input,
+input[type="radio"] {
   width: auto;
   margin: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: $dm-color-primary;
 }
 
 .dm-form-actions {

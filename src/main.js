@@ -8,6 +8,8 @@ import './components/dm-modal.js';
 import './components/dm-navbar.js';
 import './components/dm-floating-input.js';
 import './components/dm-toggle.js';
+import './components/dm-checkbox.js';
+import './components/dm-radio.js';
 import './components/dm-carousel.js';
 
 const toastContainer = document.querySelector('dm-toast-container');
